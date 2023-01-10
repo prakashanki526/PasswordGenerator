@@ -1,0 +1,34 @@
+.body{
+    height: 800px;
+    background-color: #1E1E1E;
+    padding-top: 30px;
+}
+
+.title{
+    height: 40px;
+    width: 480px;
+    margin: auto;
+    color: grey;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-align: center;
+    font-size: larger;
+    padding-top: 7px;
+}
+
+.password{
+    height: 70px;
+    width: 480px;
+    /* border: 1px solid red; */
+    margin: auto;
+    background-color: #24232B;
+}
+
+.container{
+    height: 469px;
+    width: 480px;
+    /* border: 1px solid green; */
+    margin: auto;
+    margin-top: 20px;
+    background-color: #24232B;
+}
