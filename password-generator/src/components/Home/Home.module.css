@@ -2,6 +2,7 @@
     height: 800px;
     background-color: #1E1E1E;
     padding-top: 30px;
+    letter-spacing: 1.5px;
 }
 
 .title{
@@ -14,21 +15,162 @@
     text-align: center;
     font-size: larger;
     padding-top: 7px;
+    font-family: Ubuntu;
+}
+
+.passwordContainer{
+    height: 70px;
+    width: 480px;
+    margin: auto;
+    background-color: #24232B;
 }
 
 .password{
-    height: 70px;
-    width: 480px;
-    /* border: 1px solid red; */
-    margin: auto;
-    background-color: #24232B;
+    padding: 20px 25px;
+    color: grey;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
 
 .container{
     height: 469px;
     width: 480px;
-    /* border: 1px solid green; */
     margin: auto;
     margin-top: 20px;
     background-color: #24232B;
+    padding-top: 10px;
 }
+
+.charlength{
+    color: white;
+    padding: 20px 25px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.length{
+    font-size: 26px;
+    color: aquamarine;
+}
+
+.slider{
+    padding: 20px 25px;
+}
+
+.form{
+    width: 424px;
+    color: white;
+    margin: 5px 25px;
+    line-height: 35px;
+    letter-spacing: 2.5px;
+    font-size: 18px;
+    bottom: 200px;
+    position: absolute;
+    bottom: 220px;
+}
+
+.checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    margin-right: 20px;
+  }
+
+.checkmark:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+.strength{
+    height: 59px;
+    width: 392px;
+    position: absolute;
+    bottom: 145px;
+    background-color: #1E1E1E;
+    margin-left: 25px;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.strengthLeft{
+    margin: 18px 0px;
+}
+
+.strengthRight{
+    margin: 15px 0px;
+    display: flex;
+}
+
+.indicator{
+    height: 20px;
+    width: 4px;
+    border: 2px solid white;
+    margin: 3px;
+}
+
+.activeIndicator{
+    height: 20px;
+    width: 4px;
+    border: 2px solid white;
+    margin: 3px;
+    background-color: aqua;
+}
+
+.generate{
+    height: 49px;
+    width: 424px;
+    margin-left: 25px;
+    position: absolute;
+    bottom: 75px;
+    background-color: aquamarine;
+    color: black;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    border: 0;
+}
+
+.generate:hover{
+    cursor: pointer;
+}
+
+.generate span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .generate span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+.generate:hover span {
+    padding-right: 25px;
+  }
+  
+  .generate:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .generate:active{
+    transform: translateY(2px);
+  }
+
+  .warning{
+    color: red;
+    margin-left: 28px;
+    position: absolute;
+    bottom: 50px;
+  }
