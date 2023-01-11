@@ -23,26 +23,26 @@ export default async function generatePassword(length,lower,upper,number,symbol)
         }
 
         if(upper){
-            for ( var i = 0; i < 1; i++ ) {
+            for ( i = 0; i < 1; i++ ) {
                 result += uc.charAt(Math.floor(Math.random() * 26));
             }
         }
 
         if(number){
-            for ( var i = 0; i < 1; i++ ) {
+            for ( i = 0; i < 1; i++ ) {
                 result += num.charAt(Math.floor(Math.random() * 10));
             }
         }
 
         if(symbol){
-            for ( var i = 0; i < 1; i++ ) {
+            for ( i = 0; i < 1; i++ ) {
                 result += sym.charAt(Math.floor(Math.random() * 8));
             }
         }
 
         let currLen = result.length;
 
-        for ( var i = 0; i < length-currLen; i++ ) {
+        for ( i = 0; i < length-currLen; i++ ) {
             result += ran.charAt(Math.floor(Math.random() * ran.length));
         }
         
