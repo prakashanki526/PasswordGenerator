@@ -36,7 +36,7 @@ export default async function generatePassword(length,lower,upper,number,symbol)
         let currLen = result.length;
 
         for ( var i = 0; i < length-currLen; i++ ) {
-            result += ran.charAt(Math.floor(Math.random() * 26));
+            result += ran.charAt(Math.floor(Math.random() * 70));
         }
         
         return result;
