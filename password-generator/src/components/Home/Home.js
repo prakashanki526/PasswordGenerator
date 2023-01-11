@@ -45,7 +45,7 @@ const Home = () => {
 
     async function validate(){
         if(length<6){
-            setWarningMessage("* Too small password.");
+            setWarningMessage("** Password must contain atleast 6 characters.");
             setPassword("");
             return;
         } else{

@@ -14,8 +14,6 @@ export default async function generatePassword(length,lower,upper,number,symbol)
 
     !ran ? ran+=lc : ran+="";
 
-    console.log(ran);
-
     let result = "";
 
         if(lower){
