@@ -18,6 +18,12 @@
     font-family: Ubuntu;
 }
 
+.mainContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+}
+
 .passwordContainer{
     height: 70px;
     width: 480px;
@@ -186,4 +192,8 @@
     position: absolute;
     bottom: 50px;
     font-style: italic;
+  }
+
+  .recent{
+    margin: 30px 30px;
   }
