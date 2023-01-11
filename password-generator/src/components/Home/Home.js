@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import styles from './Home.module.css';
 import 'toolcool-range-slider';
+import Generate from '../Generate';
 
 const Home = () => {
     const [password,setPassword] = useState("P4$5W0rD!");
@@ -17,12 +18,6 @@ const Home = () => {
 
     function handleChange(event){
         setLength(event.target.value);
-    }
-
-    function validate(){
-        if(length<6){
-            setWarningMessage("* Too small password.");
-        }
     }
 
     function handleInputState(event){
@@ -48,19 +43,16 @@ const Home = () => {
         setInputs({...inputs, [currName]: !currVal});
     }
 
-    function generatePassword(){
-        const uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const lc = "abcdefghijklmnopqrstuvwxyz";
-        const num = "1234567890";
-        const sym = "!@#$%^&*";
-
-        let result = "";
-
-        for ( var i = 0; i < length; i++ ) {
-            result += lc.charAt(Math.floor(Math.random() * 26));
+    async function validate(){
+        if(length<6){
+            setWarningMessage("* Too small password.");
+            setPassword("");
+            return;
+        } else{
+            setWarningMessage("");
+            let result = await Generate(length,inputs.lower,inputs.upper,inputs.number,inputs.symbol);
+            setPassword(result);
         }
-        
-        setPassword(result);
     }
 
     return (
@@ -106,7 +98,7 @@ const Home = () => {
                         <div className={styles.indicator} style={{backgroundColor: count>3 ? "aqua" : ""}}></div>
                     </div>
                 </div>
-                <button className={styles.generate} onClick={generatePassword}>
+                <button className={styles.generate} onClick={validate}>
                     <span>GENERATE</span>
                 </button>
                 <div className={styles.warning}>
