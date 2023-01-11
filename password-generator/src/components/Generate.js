@@ -5,6 +5,7 @@ export default async function generatePassword(length,lower,upper,number,symbol)
     const lc = "abcdefghijklmnopqrstuvwxyz";
     const num = "1234567890";
     const sym = "!@#$%^&*";
+    const ran = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*";
 
     let result = "";
 
@@ -35,10 +36,8 @@ export default async function generatePassword(length,lower,upper,number,symbol)
         let currLen = result.length;
 
         for ( var i = 0; i < length-currLen; i++ ) {
-            result += lc.charAt(Math.floor(Math.random() * 26));
+            result += ran.charAt(Math.floor(Math.random() * 26));
         }
-
-        console.log(result);
         
         return result;
 
