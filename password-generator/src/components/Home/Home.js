@@ -9,6 +9,7 @@ import PassContainer from '../PassContainer/PassContainer';
 const Home = () => {
     const [password,setPassword] = useState("P4$5W0rD!");
     const [length, setLength] = useState(0);
+
     const [inputs, setInputs] = useState({
         "upper": false,
         "lower": false,
@@ -125,6 +126,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={styles.recents}>
+                    <div className={styles.title}>Recent Passwords</div>
                     <div className={styles.recent}>
                         <PassContainer password={recents.recent1} />
                     </div>
